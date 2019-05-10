@@ -1,0 +1,79 @@
+program exe;
+
+uses crt;
+BEGIN
+
+
+unit Vect2DUnit;
+
+interface
+
+TYPE vect=RECORD
+    posx:integer;
+    posy:integer;
+END;
+
+
+function addVect(Vect1 : Vect2 : Vect2D): Vect2D;
+begin
+        addVect.posX := (Vect1.posX + Vect2.posX);
+        addVect.posY := (Vect1.posY + Vect2.posY);
+
+end;
+
+function moinsVect(Vect1 : Vect2 : Vect2D) : Vect2D ;
+begin
+        moinsVect.posX  := (Vect1.posX - Vect2.posX);
+        moinsVect.posY  := (Vect1.posY - Vect2.posY);
+end;
+
+function multiVect(Vect1 : Vect2 : Vect2D) : Vect2D ;
+begin
+        multiVect.posX  := (Vect1.posX * Vect2.posX);
+        multiVect.posY  := (Vect1.posY * Vect2.posY);
+end;
+function divVect(Vect1 : Vect2 : Vect2D) : Vect2D ;
+begin
+        divVect.posX  := (Vect1.posX / Vect2.posX);
+        divVect.posY  := (Vect1.posY / Vect2.posY);
+end;
+END.
+
+unit GameObjetUnit;
+
+interface
+
+uses VectUnit;
+
+TYPE gameObjet=RECORD
+    texture : integer; //SDL;
+    position : vect;
+END;
+
+
+
+implementation
+
+
+
+END.
+
+unit BallonUnit;
+
+interface
+
+uses gameobjetUnit;
+
+TYPE Ballon=RECORD
+    obj:gameobjet;
+    couleur:integer;
+    rapidite:integer;
+END;
+
+
+
+implementation
+
+
+
+END.
